@@ -1,7 +1,7 @@
 const axios = require("axios");
 const config = require("../../common/helper/configs/app.config");
 
-const receiveGithubReponse = async (payload) => {
+const receiveGithubPullRequest = async (payload) => {
   const pullRequestStateToProps = {
     repositoryName: payload.repository.name,
     pullRequestLink: payload.pull_request.html_url,
@@ -28,5 +28,5 @@ const receiveGithubReponse = async (payload) => {
 };
 
 module.exports = {
-  receiveGithubReponse,
+  receiveGithubPullRequest,
 };

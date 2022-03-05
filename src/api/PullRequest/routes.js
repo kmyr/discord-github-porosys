@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
       throw err;
     }
   } catch (err) {
+    console.log(err)
     res.status(404).json({ message: "خطایی رخ داد.", error: err });
   }
 });
