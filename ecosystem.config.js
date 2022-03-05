@@ -19,13 +19,13 @@ module.exports = {
     production: {
       host: "185.79.156.89",
       key: "~/.ssh/poroshat",
-      path: "/home/deploy/repositories/workflow-api/staging",
+      path: "/home/deploy/repositories/discord-github/production",
       "pre-deploy": "git fetch && git reset --hard origin/main",
       "post-deploy":
-        "cd backend && yarn install && yarn build && pm2 startOrReload ecosystem.config.js --env production",
+        "yarn install && pm2 startOrReload ecosystem.config.js --env production",
       "pre-deploy-local": "echo 'Starting Deployment to production'",
       ref: "origin/main",
-      repo: "git@github.com:Porosys/porosys.git",
+      repo: "git@github.com:Porosys/discord-github.git",
       ssh_options: "StrictHostKeyChecking=no",
       user: "deploy",
     },
