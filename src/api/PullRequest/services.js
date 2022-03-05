@@ -1,0 +1,32 @@
+const axios = require("axios");
+const config = require("../../common/helper/configs/app.config");
+
+const receiveGithubReponse = async (payload) => {
+  const pullRequestStateToProps = {
+    repositoryName: payload.repository.name,
+    pullRequestLink: payload.pull_request.html_url,
+    pullRequestTitle: payload.pull_request.title,
+    headBranchRef: payload.pull_request.head.ref,
+    baseBranchRef: payload.pull_request.base.ref,
+    senderName: payload.sender.login,
+    senderAvatar: payload.sender.avatar_url,
+  };
+
+  if (payload.action !== "opened") return;
+
+  await axios.post(config.discord_webhook, {
+    username: pullRequestStateToProps.senderName,
+    avatar_url: pullRequestStateToProps.senderAvatar,
+    content: `
+    ${pullRequestStateToProps.pullRequestTitle}.
+    MERGING ${pullRequestStateToProps.headBranchRef} INTO ${pullRequestStateToProps.baseBranchRef}.
+    RESPOSITORY NAME: ${pullRequestStateToProps.repositoryName}.
+    ${pullRequestStateToProps.pullRequestLink}`,
+  });
+
+  return pullRequestStateToProps;
+};
+
+module.exports = {
+  receiveGithubReponse,
+};
