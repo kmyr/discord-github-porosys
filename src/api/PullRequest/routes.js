@@ -11,8 +11,6 @@ router.post("/", async (req, res) => {
     );
     if (dataResponse) {
       res.json(dataResponse);
-    } else {
-      throw err;
     }
   } catch (err) {
     console.error(`EEROR DATE: ${new Date()} =>`, err);
