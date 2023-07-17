@@ -19,10 +19,10 @@ const receiveGithubPullRequest = async (payload) => {
     avatar_url: pullRequestStateToProps.senderAvatar,
     content: `
     > :bust_in_silhouette: **User**: hamidrezaramzani
-      :herb: **Branch**: PS-132/createFelanForm 
-      :open_file_folder: **Repository**: Cartable
-      :deciduous_tree: **Base Branch**: Main
-      :link: **Pull Request Link**:
+     :herb: **Branch**: PS-132/createFelanForm 
+     :open_file_folder: **Repository**: Cartable
+     :deciduous_tree: **Base Branch**: Main
+     :link: **Pull Request Link**:
 `,
   });
 
