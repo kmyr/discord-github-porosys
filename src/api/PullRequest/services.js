@@ -18,11 +18,11 @@ const receiveGithubPullRequest = async (payload) => {
     username: pullRequestStateToProps.senderName,
     avatar_url: pullRequestStateToProps.senderAvatar,
     content: `
-    :bust_in_silhouette: **User**: ${pullRequestStateToProps.senderName}
-    :herb: **Branch**: ${pullRequestStateToProps.headBranchRef} 
-    :open_file_folder: **Repository**: ${pullRequestStateToProps.repositoryName}
-    :deciduous_tree: **Base Branch**: ${pullRequestStateToProps.baseBranchRef}
-    :link: **Pull Request Link**: ${pullRequestStateToProps.pullRequestLink}
+    > :bust_in_silhouette: **User**: hamidrezaramzani
+      :herb: **Branch**: PS-132/createFelanForm 
+      :open_file_folder: **Repository**: Cartable
+      :deciduous_tree: **Base Branch**: Main
+      :link: **Pull Request Link**:
 `,
   });
 
