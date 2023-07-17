@@ -18,12 +18,12 @@ const receiveGithubPullRequest = async (payload) => {
     username: pullRequestStateToProps.senderName,
     avatar_url: pullRequestStateToProps.senderAvatar,
     content: `
-    :regional_indicator_p: :regional_indicator_r: :arrow_heading_down: 
-   > **${pullRequestStateToProps.pullRequestTitle.toUpperCase()}**
-    Merging **${pullRequestStateToProps.headBranchRef.toUpperCase()}** into **${pullRequestStateToProps.baseBranchRef.toUpperCase()}**
-    Repo Name: **${pullRequestStateToProps.repositoryName.toUpperCase()}**
-    
-    **PR Link:** ${pullRequestStateToProps.pullRequestLink}`,
+    :bust_in_silhouette: **User**: ${pullRequestStateToProps.senderName}
+    :herb: **Branch**: ${pullRequestStateToProps.headBranchRef} 
+    :open_file_folder: **Repository**: ${pullRequestStateToProps.repositoryName}
+    :deciduous_tree: **Base Branch**: ${pullRequestStateToProps.baseBranchRef}
+    :link: **Pull Request Link**: ${pullRequestStateToProps.pullRequestLink}
+`,
   });
 
   return pullRequestStateToProps;
