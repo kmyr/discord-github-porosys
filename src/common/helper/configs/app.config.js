@@ -1,7 +1,7 @@
 const appConfig = {
   app_port: process.env.PORT || 3001,
   discord_webhook:
-    "https://discord.com/api/webhooks/942795540733784154/keMV0H7ZUajj8kNmE6IR4Uyceoz5po5ZfPZlVh4b1bSCfNf3Hq_qdPYebjZpKhkaVehq",
+    "https://discord.com/api/webhooks/1274683318868377639/wjMa5SgOVT-4ijriE1kCEZ2gUnEx0qj-PrlcLwTEZrRKdWwZuA6HTo85_DNRl455xCPn",
 };
 
 module.exports = appConfig;
