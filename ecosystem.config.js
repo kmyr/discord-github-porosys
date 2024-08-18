@@ -4,7 +4,7 @@ module.exports = {
       append_env_to_name: true,
       autorestart: true,
       env_production: {
-        HOST: "185.79.156.89",
+        HOST: "194.5.188.224",
         NODE_ENV: "prod",
         PORT: 6001,
       },
@@ -17,7 +17,7 @@ module.exports = {
   ],
   deploy: {
     production: {
-      host: "185.79.156.89",
+      host: "194.5.188.224",
       key: "~/.ssh/poroshat",
       path: "/home/deploy/repositories/discord-github/production",
       "pre-deploy": "git fetch && git reset --hard origin/main",
